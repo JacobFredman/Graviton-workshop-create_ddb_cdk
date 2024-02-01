@@ -12,7 +12,7 @@ class GravitonWorkshopCreateDdbCdkStack(Stack):
         urls_table = dynamodb.Table(
             self, "GravitonWorkshopDdbUrlsTable",
             partition_key=dynamodb.Attribute(
-                name="url",
+                name="short_url",
                 type=dynamodb.AttributeType.STRING
             ),
             billing_mode=dynamodb.BillingMode.PAY_PER_REQUEST,
